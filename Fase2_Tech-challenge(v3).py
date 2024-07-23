@@ -109,10 +109,14 @@ test_predict_plot = np.empty_like(ibovespa_scaled)
 test_predict_plot[:, :] = np.nan
 test_predict_plot[len(train_predict) + (look_back * 2) + 1:len(ibovespa_scaled) - 1, :] = test_predict
 
+# Ajustar o índice para os arrays de previsão
+train_dates = dates[look_back:len(train_predict) + look_back]
+test_dates = dates[len(train_predict) + (look_back * 2) + 1:len(ibovespa_scaled) - 1]
+
 plt.figure(figsize=(14, 7))
 plt.plot(dates, scaler.inverse_transform(ibovespa_scaled), label='Preço de Fechamento Real')
-plt.plot(train_predict_plot, label='Previsão de Treino')
-plt.plot(test_predict_plot, label='Previsão de Teste')
+plt.plot(train_dates, train_predict, label='Previsão de Treino')
+plt.plot(test_dates, test_predict, label='Previsão de Teste')
 plt.title('Previsão de Preço de Fechamento do IBOVESPA')
 plt.xlabel('Data')
 plt.ylabel('Preço (R$)')

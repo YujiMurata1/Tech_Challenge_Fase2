@@ -75,7 +75,7 @@ model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 # Treinar o modelo
-model.fit(X_train, Y_train, epochs=1, batch_size=1, verbose=2) #Aumentar epochs para aumentar acurácia (reduz desempenho)
+model.fit(X_train, Y_train, epochs=5, batch_size=1, verbose=2) #Aumentar epochs para aumentar acurácia (reduz desempenho)
 
 # Passo 4: Avaliação do Modelo
 # 4.1 Fazer Previsões Prever e inverter a normalização:
@@ -126,12 +126,3 @@ plt.ylabel('Preço (R$)')
 plt.legend()
 plt.show()
 
-# Passo 5: Construção da Apresentação para Investidores
-# 5.1 Introdução Slide de Título: Título: "Previsão do Fechamento Diário do IBOVESPA"
-# 5.2 Objetivo do Projeto Slide de Objetivo: Explicar que o objetivo é prever o fechamento diário do IBOVESPA para auxiliar investidores.
-# 5.3 Metodologia Slide de Metodologia: Detalhar os passos de coleta, limpeza, análise e modelagem dos dados.
-# 5.4 Análise de Dados Slides de Visualizações: Gráficos mostrando a evolução do preço de fechamento, volumes e outras variáveis relevantes.
-# 5.5 Desenvolvimento do Modelo Slides de Modelo Preditivo: Explicar a escolha do LSTM e justificar a técnica. Mostrar o processo de construção e treinamento do modelo.
-# 5.6 Avaliação do Modelo Slide de Avaliação: Apresentar os resultados de acuracidade, RMSE e R2 Score. Comparar com o objetivo de acuracidade superior a 70%.
-# 5.7 Resultados e Insights Slide de Resultados: Mostrar previsões do modelo. Discussão sobre a utilidade prática das previsões.
-# 5.8 Conclusão e Recomendações Slide de Conclusão: Resumir os principais pontos e conclusões. Fazer recomendações com base nos resultados.

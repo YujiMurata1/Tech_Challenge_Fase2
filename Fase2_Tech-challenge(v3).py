@@ -16,7 +16,8 @@ ibovespa= pd.read_csv(url, delimiter=',', decimal=',', thousands='.', index_col=
 print(ibovespa.isnull().sum())
 # Remover ou interpolar dados faltantes
 ibovespa = ibovespa.interpolate()
-
+#Ordenar pela data -- 26/07/2024
+ibovespa = ibovespa.sort_values(by='Data')
 # 2.2 Análise Exploratória de Dados (EDA) Visualizar dados históricos:
 # Converter coluna de data para datetime
 ibovespa.index = pd.to_datetime(ibovespa.index)

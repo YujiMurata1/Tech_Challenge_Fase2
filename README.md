@@ -1,4 +1,4 @@
-Thech Challenge Fase 2 [Grupo 33]
+Thech Challenge Fase 2 [Grupo 33] TESTE
 
 Etapa 1: Extração dos dados
 Dados foram extraídos de forma manual a partir das tabelas disponibilizadas em https://br.investing.com/indices/bovespa-historical-data. 
